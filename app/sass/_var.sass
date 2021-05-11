@@ -1,0 +1,68 @@
+@font-face 
+    font-family: 'Roboto'
+    src: url('../font/Roboto-Light.woff2') format('woff2'), url('../font/Roboto-Light.woff') format('woff')
+    font-weight: 300
+    font-style: normal
+    font-display: swap
+
+@font-face 
+    font-family: 'Roboto'
+    src: url('../font/Roboto-Bold.woff2') format('woff2'), url('../font/Roboto-Bold.woff') format('woff')
+    font-weight: 700
+    font-style: normal
+    font-display: swap
+
+@font-face
+    font-family: 'Roboto'
+    src: url('../font/Roboto-Regular.woff2') format('woff2'), url('../font/Roboto-Regular.woff') format('woff')
+    font-weight: 400
+    font-style: normal
+    font-display: swap
+
+$main: #2E987A
+$main_50: #34D2A5
+$main_light: #83E1C6
+$second: linear-gradient(90.72deg, #FC8800 0.62%, #FF3D00 108.09%)
+$third: #2F2E41
+
+.title-1, h1
+    font-weight: 700
+    font-size: 42px
+.title-2, h2
+    font-weight: 700
+    font-size: 36px
+.title-3, h3
+    font-weight: 700
+    font-size: 24px
+
+.btn
+    font-weight: 700
+    font-size: 18px
+    line-height: 1.2
+    width: 180px
+    height: 52px
+    background: $second
+    border-radius: 25px
+    color: #fff
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 1px solid $second
+    &_white
+        background: #fff
+        color: $third
+        border: 1px solid $third
+
+.container
+    max-width: 1230px + (2 * 15px)
+    padding: 0 15px
+    margin: 0 auto
+.clearfix::after
+    content: ''
+    display: block
+    clear: both
+.scrollOff
+    overflow-y: hidden
+.full-screen
+    .container
+        min-height: 100vh

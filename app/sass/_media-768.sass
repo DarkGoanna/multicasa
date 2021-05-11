@@ -1,0 +1,118 @@
+@media screen and ( max-width: 768px )
+    .header
+        background: $third
+        color: #fff
+        height: 80px
+        & .container
+            padding-right: 80px
+        &__links
+            flex-direction: column
+            align-items: flex-start
+            margin: 0 auto
+        &__link
+            &:not(:last-child)
+                margin-right: 0
+                margin-bottom: 5px
+    .logo
+        & img
+            width: 80px
+            height: 80px
+    .menu
+        width: 100%
+        height: 100%
+        background: transparent
+        position: fixed
+        top: 0
+        left: 0
+        transition: .2s
+        &__list
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -100%)
+            opacity: 0
+            visibility: hidden
+            transition: .2s
+            display: flex
+            flex-direction: column
+            overflow-y: scroll
+            width: 100%
+            &::-webkit-scrollbar
+                width: 0
+                background: transparent
+            & .active
+                & > a
+                    // color: #FFBD80
+            & .menu-item-has-children
+                position: relative
+                padding-right: 30px
+                width: max-content
+                & ul
+                    margin-left: 60px
+                    list-style: none
+                    display: none
+                    & > li > a
+                        font-weight: 700
+                        font-size: 24px
+                        display: inline-block
+                & .menu__arrow
+                    position: absolute
+                    top: 50%
+                    right: 0
+                    width: 15px
+                    height: 15px
+                    border-right: 2px solid #fff
+                    border-bottom: 2px solid #fff
+                    transform: translateY(-50%) rotate(45deg)
+                    cursor: pointer
+                    transition: .2s
+                    transform-origin: center
+                &.active
+                    & > ul
+                        display: block
+                    & > .menu__arrow
+                        // border-color: #FFBD80
+                        transform: translateY(-20%) rotate(-135deg)
+            & li:not(:last-child)
+                margin-right: 0
+            & > li > a
+                font-weight: 700
+                font-size: 36px
+                display: inline-block
+                color: #fff
+            & .menu__sub-list + .menu__arrow
+                top: 30px
+            & .menu__sub-sub-list + .menu__arrow
+                top: 24px
+        &.open
+            background: $third
+            transition: .2s
+            & .menu__list
+                opacity: 1
+                visibility: visible
+                transform: translate(-50%, -50%)
+                transition: .2s
+
+            & .menu__list-wrapper
+                opacity: 1
+                visibility: visible
+                & a
+                    opacity: 1
+                    transition: opacity .2s .2s
+        &__burger
+            display: flex
+    .info
+        & .container
+            min-height: auto
+            flex-direction: column-reverse
+        &__description
+            max-width: 100%
+        &_1
+            & svg
+                position: relative
+                margin-top: -200px
+                margin-bottom: -50px
+                right: -50px
+                transform: none
+    .mobile-off
+        display: none

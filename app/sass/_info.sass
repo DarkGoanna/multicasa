@@ -1,0 +1,27 @@
+.info
+    overflow-x: hidden
+    & .container
+        display: flex
+        align-items: center
+        justify-content: start
+        position: relative
+
+    &__description
+        max-width: 50%
+    &_right
+        & .container
+            flex-direction: row-reverse
+    &__text
+        margin-top: 22px
+    &__btn
+        margin-top: 36px
+    & svg
+        position: absolute
+        z-index: -1
+    &_1
+        & svg
+            top: 50%
+            right: -400px
+            transform: translateY(-65%)
+            width: 1200px
+            height: 1200px

@@ -39,3 +39,16 @@ function openSubmenu(event) {
         event.target.parentElement.classList.toggle('active');
     }
 }
+
+// sticky header
+if (window.matchMedia("(min-width: 768px)").matches) {
+    const header = document.querySelector('.header');
+
+    document.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('background');
+        } else {
+            header.classList.remove('background');
+        }
+    })
+}

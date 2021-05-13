@@ -4,6 +4,8 @@
     margin: 0
     padding: 0
     outline: none
+html
+    overflow-x: hidden
 body
     font-family: 'Roboto', sans-serif //300 400 700
     font-style: normal
@@ -11,6 +13,15 @@ body
     font-size: 16px
     line-height: 1.2
     background-color: #fff
+    overflow-x: hidden
+body::-webkit-scrollbar
+    width: 5px
+    background: $third
+body::-webkit-scrollbar-track
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+
+body::-webkit-scrollbar-thumb
+    background: $main
 a
     text-decoration: none
     color: inherit
@@ -19,13 +30,19 @@ input, textarea
     font-family: 'Open Sans', sans-serif
 svg
     pointer-events: none
+section + section
+    padding-top: 50px
 
 @import 'header'
 @import 'info'
+@import 'our-services'
+@import 'last-news'
+@import 'seo'
+@import 'footer'
 
 @import 'media-1200'
 @import 'media-1000'
 @import 'media-768'
 @import 'media-580'
 @import 'media-480'
-@import 'media-400'
+@import 'media-350'

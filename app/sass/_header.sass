@@ -6,12 +6,28 @@
     left: 0
     z-index: 100
     background: transparent
+    transition: .5s
+    &.background
+        height: 100px
+        background: $third
+        color: #fff
+        transition: .5s
+        & .logo
+            & img
+                width: 100px
+                height: 100px
+                transition: .5s
     & .container
         display: flex
         align-items: center
         justify-content: space-between
     & .logo
         margin-right: auto
+        & img
+            width: 120px
+            height: 120px
+            transition: .5s
+
     & .menu
         margin-right: 15px
 
@@ -52,6 +68,7 @@
             background-color: #fff
             transition: .2s
         &.open
+            right: 35px
             & span
                 transition: .2s
                 &:nth-child(1)

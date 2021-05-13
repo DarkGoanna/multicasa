@@ -1,27 +1,37 @@
 .info
-    overflow-x: hidden
-    & .container
+    &__inner
         display: flex
         align-items: center
         justify-content: start
         position: relative
-
     &__description
         max-width: 50%
-    &_right
-        & .container
-            flex-direction: row-reverse
     &__text
         margin-top: 22px
     &__btn
         margin-top: 36px
-    & svg
+    &__image
+        pointer-events: none
         position: absolute
         z-index: -1
+        &_mobile
+            display: none
+    &_right
+        & .info__inner
+            flex-direction: row-reverse
     &_1
-        & svg
-            top: 50%
-            right: -400px
-            transform: translateY(-65%)
-            width: 1200px
-            height: 1200px
+        & .info__image
+            top: -700px
+            right: -600px
+    &_2
+        & .info__image
+            left: -200px
+            max-height: 700px
+    &_3
+        & .info__image
+            right: -350px
+            max-height: 1000px
+    &_4
+        & .info__image
+            left: -400px
+            max-height: 900px

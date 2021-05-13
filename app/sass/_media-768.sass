@@ -1,18 +1,19 @@
 @media screen and ( max-width: 768px )
+    .full-screen
+        .container
+            display: block
+            min-height: max-content
+    main
+        margin-top: 80px
+    section + section
+        padding-top: 30px
     .header
         background: $third
         color: #fff
         height: 80px
         & .container
             padding-right: 80px
-        &__links
-            flex-direction: column
-            align-items: flex-start
-            margin: 0 auto
-        &__link
-            &:not(:last-child)
-                margin-right: 0
-                margin-bottom: 5px
+
     .logo
         & img
             width: 80px
@@ -102,17 +103,48 @@
         &__burger
             display: flex
     .info
-        & .container
-            min-height: auto
+        &__inner
             flex-direction: column-reverse
+            gap: 30px
+            & .info__image_mobile
+                top: auto
+                right: auto
+                height: auto
+                width: 100%
+                max-width: 400px
+                transform: none
         &__description
             max-width: 100%
-        &_1
+        &_right
+            & .info__inner
+                flex-direction: column-reverse
+                gap: 30px
+            & .info__description
+                max-width: 100%
+        &__image
+            display: none
+            &_mobile
+                display: block
+    .our-services
+        &__title
+            margin-bottom: 30px
+        &__inner
+            flex-wrap: wrap
+        &__card
+            width: 50%
+            padding: 20px 10px
+    .last-news
+        &__card
+            grid-template-columns: 100%
+            row-gap: 30px
+            padding: 20px
             & svg
-                position: relative
-                margin-top: -200px
-                margin-bottom: -50px
-                right: -50px
-                transform: none
-    .mobile-off
-        display: none
+                height: 250px
+                width: 250px
+                grid-row: 1/2
+                justify-self: center
+        &__btn-wrapper
+            justify-content: space-around
+        &__btn
+            &:not(:last-child)
+                margin-right: 0

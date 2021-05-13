@@ -1,9 +1,41 @@
 @media screen and ( max-width: 1000px )
+    .header
+        &__links
+            flex-direction: column
+        &__link:not(:last-child)
+            margin: 0
     .info
+        &_right
+            & .info__description
+                max-width: 45%
         &_1
+            & .info__image
+                transform: scale(.8)
+        &_2
+            & .info__image
+                left: -300px
+        &_3
+            & .info__image
+                right: -400px
+                transform: scale(.8)
+        &_4
+            & .info__image
+                right: -400px
+                transform: scale(.9)
+    .our-services
+        &__inner
+            justify-content: space-around
+        &__card
+            width: 20%
+    .last-news
+        &__card
+            grid-template-columns: 1fr 200px
+            column-gap: 30px
+            padding-right: 20px
             & svg
-                top: 50%
-                right: -300px
-                transform: translateY(-65%)
-                width: 800px
-                height: 800px
+                height: 200px
+        &__btn-wrapper
+            justify-content: flex-start
+        &__btn
+            &:not(:last-child)
+                margin-right: 60px

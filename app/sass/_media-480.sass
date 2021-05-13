@@ -1,7 +1,28 @@
 @media screen and ( max-width: 480px )
-    .info
-        &_1
+    .last-news
+        &__card
+            grid-template-columns: 100%
+            row-gap: 30px
+            padding: 20px
             & svg
-                margin-top: -150px
-                width: 600px
-                height: 600px
+                height: 250px
+                width: 250px
+                grid-row: 1/2
+                justify-self: center
+        &__btn-wrapper
+            justify-content: center
+            align-items: center
+            flex-direction: column
+        &__btn
+            &:not(:last-child)
+                margin-bottom: 10px
+    .header
+        & .container
+            padding-right: 60px
+        &__link
+            font-size: 14px
+    .languages
+        font-size: 14px
+    .menu
+        &__burger
+            right: 15px

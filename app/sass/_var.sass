@@ -1,11 +1,11 @@
-@font-face 
+@font-face
     font-family: 'Roboto'
     src: url('../font/Roboto-Light.woff2') format('woff2'), url('../font/Roboto-Light.woff') format('woff')
     font-weight: 300
     font-style: normal
     font-display: swap
 
-@font-face 
+@font-face
     font-family: 'Roboto'
     src: url('../font/Roboto-Bold.woff2') format('woff2'), url('../font/Roboto-Bold.woff') format('woff')
     font-weight: 700
@@ -21,19 +21,19 @@
 
 $main: #2E987A
 $main_50: #34D2A5
-$main_light: #83E1C6
+$main_light: rgba(#83E1C6, .2)
 $second: linear-gradient(90.72deg, #FC8800 0.62%, #FF3D00 108.09%)
 $third: #2F2E41
 
 .title-1, h1
-    font-weight: 700
-    font-size: 42px
-.title-2, h2
-    font-weight: 700
+    font-weight: 400
     font-size: 36px
+.title-2, h2
+    font-weight: 400
+    font-size: 28px
 .title-3, h3
-    font-weight: 700
-    font-size: 24px
+    font-weight: 400
+    font-size: 20px
 
 .btn
     font-weight: 700
@@ -66,3 +66,6 @@ $third: #2F2E41
 .full-screen
     .container
         min-height: 100vh
+        display: flex
+        align-items: center
+        justify-content: center

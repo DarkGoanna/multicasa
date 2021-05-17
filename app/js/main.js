@@ -52,3 +52,12 @@ if (window.matchMedia("(min-width: 768px)").matches) {
         }
     })
 }
+
+// aos
+AOS.init();
+
+// если контента в первой секции, после header, будет больше чем 100vh - то добавим padding-top
+// const firstSection = document.querySelector('main > section:first-of-type');
+// if (firstSection.offsetHeight > window.innerHeight) {
+//     firstSection.classList.add('pt')
+// }

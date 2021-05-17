@@ -14,14 +14,14 @@ body
     line-height: 1.2
     background-color: #fff
     overflow-x: hidden
-body::-webkit-scrollbar
-    width: 5px
-    background: $third
-body::-webkit-scrollbar-track
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+    &::-webkit-scrollbar
+        width: 5px
+        background: $third
+    &::-webkit-scrollbar-track
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
 
-body::-webkit-scrollbar-thumb
-    background: $main
+    &::-webkit-scrollbar-thumb
+        background: $main
 a
     text-decoration: none
     color: inherit
@@ -30,6 +30,8 @@ input, textarea
     font-family: 'Open Sans', sans-serif
 svg
     pointer-events: none
+// .pt
+//     padding-top: 180px
 section + section
     padding-top: 50px
 
@@ -39,10 +41,17 @@ section + section
 @import 'last-news'
 @import 'seo'
 @import 'footer'
+@import 'intro'
 
 @import 'media-1200'
 @import 'media-1000'
 @import 'media-768'
 @import 'media-580'
 @import 'media-480'
+@import 'media-400'
 @import 'media-350'
+
+@media screen and ( min-width: 1900px )
+    .footer
+        .waves
+            display: none

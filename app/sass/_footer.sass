@@ -29,6 +29,11 @@
         justify-content: space-around
         & li, & .footer__link
             padding: 4px 0
+        & a
+            transition: .2s
+            &:hover
+                transition: .2s
+                color: #fff
     &__column-1
         & p
             text-decoration: underline
@@ -55,8 +60,6 @@
             transform-origin: 100% 19px
             transform: rotate(0deg)
             position: absolute
-
-        & li
             transform: rotate(calc(30deg * var(--i)))
             & a
                 width: 38px
@@ -64,3 +67,18 @@
                 display: inline-block
                 border-radius: 50%
                 transform: rotate(calc(-30deg * var(--i)))
+                &:hover
+                    & svg
+                        & path
+                            fill: #fff
+
+[data-aos="custom-fade-up"]
+    & path
+        opacity: 0
+        transform: translateY(100%)
+        transition: fill .2s 0s, transform .2s calc(.07s * var(--i)), opacity calc(.2s * var(--i)) 0s
+    &.aos-animate
+        & path
+            opacity: 1
+            transform: translateY(0)
+            transition: fill .2s 0s, transform .2s calc(.07s * var(--i)), opacity 1s calc(.07s * var(--i))

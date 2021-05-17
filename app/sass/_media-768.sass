@@ -13,37 +13,40 @@
         height: 80px
         & .container
             padding-right: 80px
-    .header
-        .logo
+        & .logo
             & img
                 width: 80px
                 height: 80px
+        &.background
+            height: 70px
+            & .logo
+                & img
+                    width: 70px
+                    height: 70px
+            & .menu__burger
+                top: 25px
+                transition: .2s
     .menu
-        width: 100%
-        height: 100%
-        background: transparent
-        position: fixed
-        top: 0
-        left: 0
-        transition: .2s
+        &__burger
+            display: flex
         &__list
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -100%)
+            width: 100%
+            height: 100%
+            background: transparent
+            position: fixed
+            top: 0
+            left: 0
+            transition: .2s
             opacity: 0
             visibility: hidden
-            transition: .2s
             display: flex
             flex-direction: column
+            justify-content: center
             overflow-y: scroll
-            width: 100%
+            transform: translateY(-20%)
             &::-webkit-scrollbar
                 width: 0
                 background: transparent
-            & .active
-                & > a
-                    // color: #FFBD80
             & .menu-item-has-children
                 position: relative
                 padding-right: 30px
@@ -72,7 +75,6 @@
                     & > ul
                         display: block
                     & > .menu__arrow
-                        // border-color: #FFBD80
                         transform: translateY(-20%) rotate(-135deg)
             & li:not(:last-child)
                 margin-right: 0
@@ -91,17 +93,10 @@
             & .menu__list
                 opacity: 1
                 visibility: visible
-                transform: translate(-50%, -50%)
                 transition: .2s
+                background: $third
+                transform: translateY(0)
 
-            & .menu__list-wrapper
-                opacity: 1
-                visibility: visible
-                & a
-                    opacity: 1
-                    transition: opacity .2s .2s
-        &__burger
-            display: flex
     .info
         &__inner
             flex-direction: column-reverse
@@ -112,7 +107,7 @@
                 height: auto
                 width: 100%
                 max-width: 400px
-                transform: none
+                // transform: none
         &__description
             max-width: 100%
         &_right
@@ -148,17 +143,32 @@
         &__btn
             &:not(:last-child)
                 margin-right: 0
+        &.in-single-service
+            & .last-news
+                &__card-wrapper
+                    & > svg
+                        width: 500px
+                        height: 500px
+                        margin-top: -20px
+                        margin-bottom: -20px
+                &__card
+                    max-width: 90%
+                    padding: 35px
     .footer
         & .container
-            grid-template-columns: 100%
+            padding-bottom: 15px
+            grid-template-columns: 50% 50%
+            grid-template-areas: 'logo socials''menu menu'
+            gap: 0
         &__column-wrapper
             grid-template-areas: none
             grid-template-columns: repeat(3, max-content)
-            justify-content: start
+            justify-content: space-between
             min-width: auto
             max-width: 100%
             margin: 0
             gap: 50px
+            grid-area: menu
         &__column-1
             grid-area: auto
         &__column-2
@@ -166,6 +176,14 @@
         &__column-3
             grid-area: auto
             display: block
+            border: none
+            padding: 0
         &__logo
             width: 120px
             height: 120px
+            grid-area: logo
+        &__social
+            left: 10px
+            grid-area: socials
+    .intro
+        padding: 50px 0

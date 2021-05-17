@@ -10,18 +10,18 @@
                 max-width: 45%
         &_1
             & .info__image
-                transform: scale(.8)
+                // transform: scale(.8)
         &_2
             & .info__image
                 left: -300px
         &_3
             & .info__image
                 right: -400px
-                transform: scale(.8)
+                // transform: scale(.8)
         &_4
             & .info__image
                 right: -400px
-                transform: scale(.9)
+                // transform: scale(.9)
     .our-services
         &__inner
             justify-content: space-around
@@ -39,6 +39,15 @@
         &__btn
             &:not(:last-child)
                 margin-right: 60px
+        &.in-single-service
+            & .last-news
+                &__card-wrapper
+                    flex-direction: column-reverse
+                    & > svg
+                        transform: scale(1)
+                        left: auto
+                        margin-top: -50px
+                        margin-bottom: -50px
     .footer
         & .container
             grid-template-columns: 100px 1fr 300px
@@ -65,3 +74,5 @@
             display: grid
             grid-template-columns: 50% 50%
             gap: 15px
+            border-top: 1px solid
+            padding-top: 5px

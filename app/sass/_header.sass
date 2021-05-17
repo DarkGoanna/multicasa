@@ -21,8 +21,11 @@
         display: flex
         align-items: center
         justify-content: space-between
+        height: 100%
     & .logo
         margin-right: auto
+        position: relative
+        z-index: 2
         & img
             width: 120px
             height: 120px
@@ -44,7 +47,9 @@
         position: relative
         &:not(:last-child)
             margin-right: 15px
-
+.languages
+    position: relative
+    z-index: 2
 .menu
     &__list
         padding: 0
@@ -63,15 +68,16 @@
         position: absolute
         top: 30px
         z-index: 101
-        right: 30px
+        right: 15px
         cursor: pointer
+        transition: .2s
+
         & span
             width: 100%
             height: 2px
             background-color: #fff
             transition: .2s
         &.open
-            right: 35px
             & span
                 transition: .2s
                 &:nth-child(1)
@@ -87,3 +93,7 @@
                     top: 50%
                     left: 50%
                     transform: translate(-50%, -50%) rotate(-45deg)
+.scrollOff
+    & .header
+        & .container
+            padding-right: 80px
